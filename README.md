@@ -1,12 +1,15 @@
 # graph-application
+
 A simple web application that is talking to the graph database Blazegraph. The point of this tutorial is to provide anyone versed in RDF
 the ability to run a graph database and write a simple web application over it.
 
 ## Knowledge Graphs
+
 Knowledge graphs are part of symbolic AI. In short they capture what humans mean when they use certain words e.g. when you search for "Jaguar", do you mean the animal or the car brand.
 For example, at Zalando, the workplace of the author, understanding the customers' language in search and talking to customers in a language they understand is very important, and the Fashion Knowledge Graph build at Zalando drives that.
 
 ## About this Tutorial
+
 This tutorial will help you to set up our own graph databases, add data into it, and use it in a web application.
 It will give you a quick start to building and hosting your own knowledge graph.
 If you want to explore the topic further in some of your applications, you can use this technology and expand on it.
@@ -16,7 +19,7 @@ If you want to explore the topic further in some of your applications, you can u
 ## Requirements
 
 This tutorial does not teach the basics of [Resource Description Framework (RDF)](https://en.wikipedia.org/wiki/Resource_Description_Framework),
-[Turtle syntax](https://en.wikipedia.org/wiki/Turtle_(syntax)), and [SPARQL syntax](https://en.wikipedia.org/wiki/SPARQL).
+[Turtle syntax](<https://en.wikipedia.org/wiki/Turtle_(syntax)>), and [SPARQL syntax](https://en.wikipedia.org/wiki/SPARQL).
 It is also not explaining the basics of JavaScript syntax.
 Some adequacy in all these languages is required. But you do not need to
 know these languages to go through this tutorial, since everything is written out for you in
@@ -32,8 +35,7 @@ Either download or `git clone` this repository to your local machine.
 
 Open up a terminal and navigate to this repository.
 
-
-***For Mac users***
+**_For Mac users_**
 If you downloaded this repository, most likely a ZIP file is in your
 `Downloads` folder. Unzip the file and then navigate to
 the folder, for example with:
@@ -42,7 +44,6 @@ the folder, for example with:
 cd Downloads/graph-application-master/
 ```
 
-
 ## Running a Graph Database
 
 For this tutorial I am using [Blazegraph](https://wiki.blazegraph.com/wiki/index.php/About_Blazegraph) graph database,
@@ -50,16 +51,17 @@ because it is open-source and [most-likely](https://www.i-programmer.info/news/8
 Amazon Neptune available on AWS is [based on Blazegraph](https://www.i-programmer.info/news/84-database/11358-amazon-neptune-graph-database.html).
 Certainly the experience of using both is the same.
 
-
 ### Run Blazegraph from a Docker image
+
 The easiest way to run Blazegraph is to use a popular Docker image. You can find
 those in Dockerhub. In this tutorial we will use [lyrasis/blazegraph](https://hub.docker.com/r/lyrasis/blazegraph/).
 
 Make sure you have installed [Docker](https://docs.docker.com/install/)
 
 Then run the following command to run Blazegraph according to the chosen docker image.
+
 ```
-docker run --name blazegraph -d -p 8889:8080 lyrasis/blazegraph:2.1.4
+docker run --name blazegraph -d -p 8889:8080 robcast/researchspace-blazegraph:2.2.0-20160908
 ```
 
 To see the dashboard for Blazegraph, navigate with your browser to the [localhost port 8889](http://localhost:8889/bigdata/).
@@ -89,8 +91,8 @@ Congratulations! If you have managed to follow all steps of this tutorial, then 
 
 Navigate to the Blazegraph Dashboard and go to the tab that says "Query". In the big text input field add your query and then press "Execute" to run it. Below are some example queries that you can run:
 
+**_QUERY 1_** See all classes defined in your graph
 
-***QUERY 1*** See all classes defined in your graph
 ```
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -102,7 +104,8 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 }
 ```
 
-***QUERY 2*** See all immediate instances of "clothing material"
+**_QUERY 2_** See all immediate instances of "clothing material"
+
 ```
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -116,7 +119,8 @@ prefix ns: <http://www.example.org/myexample#>
 }
 ```
 
-***QUERY 3*** See all instances including sub-classes of instances of "clothing material"
+**_QUERY 3_** See all instances including sub-classes of instances of "clothing material"
+
 ```
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -131,6 +135,7 @@ prefix ns: <http://www.example.org/myexample#>
 ```
 
 ## Setting up a Simple Web App
+
 You should have now a way to upload and read data to your graph database. Next step is to build a simple web app
 on top of the data you are storing in your graph database. For this we are using a
 simple [express JavaScript](https://expressjs.com/en/starter/installing.html) file and
@@ -139,9 +144,8 @@ to render a simple view with data coming out of the graph.
 
 Navigate to the local folder of this project (it would be called `graph-application` or `graph-application-master`).
 
-***Requirements:*** Make sure you have [Node.js installed](https://nodejs.org/en/) and
+**_Requirements:_** Make sure you have [Node.js installed](https://nodejs.org/en/) and
 `npm` that should come with it. You can check this by running `node -v` and `npm -v` )
-
 
 Install all the dependencies of this project with:
 
@@ -199,4 +203,4 @@ Navigate to the root of this repository. Run:
 docker-compose up
 ```
 
-Then navigate to [http://localhost:3001/graph](http://localhost:3001/graph) to see the end result. 
+Then navigate to [http://localhost:3001/graph](http://localhost:3001/graph) to see the end result.

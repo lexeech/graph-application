@@ -1,4 +1,4 @@
-FROM lyrasis/blazegraph:2.1.5
+FROM robcast/researchspace-blazegraph:2.2.0-20160908
 
 RUN mkdir /tmp/data
 COPY src/data /tmp/data
