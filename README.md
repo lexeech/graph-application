@@ -54,7 +54,7 @@ Certainly the experience of using both is the same.
 ### Run Blazegraph from a Docker image
 
 The easiest way to run Blazegraph is to use a popular Docker image. You can find
-those in Dockerhub. In this tutorial we will use [lyrasis/blazegraph](https://hub.docker.com/r/lyrasis/blazegraph/).
+those in Dockerhub. In this tutorial we will use ARM-processors supported version [robcast/researchspace-blazegraph](https://hub.docker.com/r/robcast/researchspace-blazegraph).
 
 Make sure you have installed [Docker](https://docs.docker.com/install/)
 
