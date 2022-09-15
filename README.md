@@ -81,7 +81,7 @@ and choose the tab "Update"
 
 Below the big text edit field, you can spot a button saying "Choose file". This is where you can upload an RDF Data file
 in several formats (N-Quads, N-Triples, N-Triples-RDR, Notation3, RDF/XML, JSON, TriG, TriX, Turtle, Turtle-RDR). To get you started
-you can upload the [Turtle file on clothing materials](data/clothing_materials.ttl) found in the data folder of this tutorial.
+you can upload the [Turtle file on clothing materials](src/data/clothing_materials.ttl) found in the data folder of this tutorial.
 
 The contents of the TTL file appears in the empty text box and by clicking "Update" below the contents is uploaded in the graph database.
 
