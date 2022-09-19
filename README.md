@@ -91,9 +91,10 @@ Congratulations! If you have managed to follow all steps of this tutorial, then 
 
 Navigate to the Blazegraph Dashboard and go to the tab that says "Query". In the big text input field add your query and then press "Execute" to run it. Below are some example queries that you can run:
 
-**_QUERY 1_** See all classes defined in your graph
+[# **QUERY 1**](src/queries/get_all_classes.rq) See all classes defined in your graph
 
 ```
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
@@ -104,9 +105,10 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 }
 ```
 
-**_QUERY 2_** See all immediate instances of "clothing material"
+[# **QUERY 2**](src/queries/get_all_clothing_materials.rq) See all immediate instances of "clothing material"
 
 ```
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix ns: <http://www.example.org/myexample#>
@@ -119,9 +121,10 @@ prefix ns: <http://www.example.org/myexample#>
 }
 ```
 
-**_QUERY 3_** See all instances including sub-classes of instances of "clothing material"
+[# **QUERY 3**](src/queries/get_all_subclasses_clothing_materials.rq) See all instances including sub-classes of instances of "clothing material"
 
 ```
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix ns: <http://www.example.org/myexample#>
